@@ -1,0 +1,67 @@
+---
+# The name of your project
+title: Spring for Apache Kafka
+
+badges:
+
+  # Specify your project's twitter handle, if any. Delete if none.
+  # twitter: SpringData
+
+  # Customize your project's badges. Delete any entries that do not apply.
+  custom:
+    - name: Source (GitHub)
+      url:  https://github.com/spring-projects/spring-kafka
+      icon: github
+
+    - name: CI (Bamboo)
+      url:  https://build.spring.io/browse/SK
+      icon: ci
+
+    - name: StackOverflow
+      url:  http://stackoverflow.com/questions/tagged/spring-kafka
+      icon: stackoverflow
+
+    - name: Metrics (SonarQube)
+      url:  https://sonar.spring.io/dashboard/index/org.springframework.kafka:spring-kafka-dist
+      icon: metrics
+
+---
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+{% capture billboard_description %}
+
+The Spring for Apache Kafka (spring-kafka) project applies core Spring concepts to the development of Kafka-based
+messaging solutions.
+It provides a "template" as a high-level abstraction for sending messages.
+It also provides support for Message-driven POJOs with `@KafkaListener` annotations and a "listener container".
+These libraries promote the use of dependency injection and declarative.
+In all of these cases, you will see similarities to the JMS support in the Spring Framework and RabbitMQ support in
+Spring AMQP.
+
+{% endcapture %}
+
+{% capture main_content %}
+
+## Features
+
+* `KafkaTemplate`
+* `KafkaMessageListenerContainer`
+* `@KafkaListner`
+* `spring-kafka-test` jar with embedded kafka server
+
+{% endcapture %}
+
+{% capture related_resources %}
+
+### Sample Projects
+
+### Getting Started Guides
+
+### Tutorials
+
+{% endcapture %}
+
+
+{% include project_page.html %}
+</html>
