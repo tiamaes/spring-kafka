@@ -393,10 +393,10 @@ public class ConcurrentMessageListenerContainerTests {
 			latch.countDown();
 		});
 
+		containerProps.setAckMode(ackMode);
 		ConcurrentMessageListenerContainer<Integer, String> container =
 				new ConcurrentMessageListenerContainer<>(cf, containerProps);
 		container.setConcurrency(2);
-		containerProps.setAckMode(ackMode);
 		container.setBeanName("test" + ackMode);
 		container.start();
 

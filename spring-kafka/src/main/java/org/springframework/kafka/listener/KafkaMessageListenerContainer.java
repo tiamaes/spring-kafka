@@ -594,8 +594,8 @@ public class KafkaMessageListenerContainer<K, V> extends AbstractMessageListener
 				}
 				try {
 					if (this.acknowledgingMessageListener != null) {
-						this.acknowledgingMessageListener.onMessage(record,
-								new ConsumerAcknowledgment(record, this.isManualImmediateAck));
+						this.acknowledgingMessageListener.onMessage(record, this.isAnyManualAck
+								? new ConsumerAcknowledgment(record, this.isManualImmediateAck) : null);
 					}
 					else {
 						this.listener.onMessage(record);
